@@ -12,7 +12,7 @@ resource "ibm_is_public_gateway" "pg" {
 
 
 resource "ibm_is_subnet_public_gateway_attachment" "pg-attach" {
-    count = 3
+  count          = 3
   subnet         = data.ibm_is_subnet.subnets[count.index].id
   public_gateway = data.ibm_is_public_gateway.pg[count.index].id
 }

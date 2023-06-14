@@ -25,10 +25,11 @@ resource "ibm_container_vpc_cluster" "cluster" {
     OPTIONAL ARGUMENTS
     *****************/
   cos_instance_crn     = ibm_resource_instance.cos.id # REQUIRED FOR OPENSHIFT CLUSTERS
-  kube_version         = "4.11.35_openshift"
+  kube_version         = "4.11.39_openshift"
   force_delete_storage = false
   wait_till            = "MasterNodeReady"
   worker_count         = 1
   resource_group_id    = data.ibm_resource_group.rg.id
   //tags                 = var.tag-rocks
 }
+

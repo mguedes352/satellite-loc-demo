@@ -32,7 +32,9 @@ data "ibm_is_vpc" "vpc" {
 }
 
 data "ibm_resource_instance" "cos" {
-  name = ibm_resource_instance.cos.name
+  name              = ibm_resource_instance.cos.name
+  resource_group_id = data.ibm_resource_group.rg.id
+  service           = "cloud-object-storage"
 }
 
 data "ibm_is_subnet" "subnets" {
