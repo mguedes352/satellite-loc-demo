@@ -9,4 +9,32 @@ provider "ibm" {
   region = var.region
 }
 
+############################
+# Data
+############################
+
+# Existing SSH key can be provided
+data "ibm_is_ssh_key" "ssh_key" {
+  name = var.my_ssh_key_name
+}
+
+data "ibm_resource_group" "rg" {
+  name = var.res_group
+}
+
+# Image for Virtual Server Insance
+data "ibm_is_image" "name" {
+  name = var.os_version
+}
+
+data "ibm_is_vpc" "vpc"{
+  name = ibm_is_vpc.vpc-instance.name
+}
+
+data "ibm_resource_instance" "cos"{
+  name = ibm_resource_instance.cos.name
+}
+
+
+
 

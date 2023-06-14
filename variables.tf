@@ -5,7 +5,6 @@
 variable "ibmcloud_api_key" {
   type        = string
   sensitive   = true
-  default     = "apikey.txt here"
   description = "API Key that will be used to create resources"
 }
 
@@ -51,10 +50,10 @@ variable "vsi_number" {
   description = "Number of VSIs in each Zone"
 }
 
-variable "subnets_number" {
-  type        = number
-  default     = 2
-  description = "Number of Subnets in each Zone"
+variable "rocks_name" {
+  type        = string
+  default     = "rocks-demo-satellite"
+  description = "Name of ROCKS Cluster"
 }
 
 

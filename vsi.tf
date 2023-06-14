@@ -8,14 +8,6 @@ locals {
   ZONE3 = "${var.region}-3"
 }
 
-############################
-# Virtual Private Cloud
-############################
-
-# Create VPC
-resource "ibm_is_vpc" "vpc-instance" {
-  name = var.vpc_name
-}
 
 ############################
 # Virtual Servicer Instance
@@ -81,23 +73,11 @@ resource "ibm_is_instance" "vsi3" {
 
 }
 
-############################
-# Data
-############################
 
-# Existing SSH key can be provided
-data "ibm_is_ssh_key" "ssh_key" {
-  name = var.my_ssh_key_name
-}
 
-data "ibm_resource_group" "rg" {
-  name = var.res_group
-}
 
-# Image for Virtual Server Insance
-data "ibm_is_image" "name" {
-  name = var.os_version
-}
+
+
 
 
 
