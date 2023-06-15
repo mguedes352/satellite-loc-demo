@@ -14,17 +14,20 @@ variable "region" {
   description = "Check the Region you want to deploy your vpc"
 }
 
-variable "my_ssh_key_name" {
-  type        = string
-  default     = "ssh-rafael"
-  description = "Existing ssh key name"
-}
-
 variable "vpc_name" {
   type        = string
   default     = "vpc-demo-satellite-rafael"
   description = "Name for VPC"
 }
+
+variable "rocks_name" {
+  type        = string
+  default     = "rocks-demo-satellite"
+  description = "Name of ROCKS Cluster"
+}
+
+
+
 
 variable "res_group" {
   type        = string
@@ -41,8 +44,15 @@ variable "os_version" {
 variable "profile" {
   type        = string
   default     = "bx2-4x16"
-  description = "Check the profiles available for VPC VSIs"
+  description = "Profile available for VPC VSIs"
 }
+
+variable "profile_rocks" {
+  type        = string
+  default     = "bx2.16x64"
+  description = "Profile available for ROCKS"
+}
+
 
 variable "vsi_number" {
   type        = number
@@ -50,11 +60,14 @@ variable "vsi_number" {
   description = "Number of VSIs in each Zone"
 }
 
-variable "rocks_name" {
+variable "my_ssh_key_name" {
   type        = string
-  default     = "rocks-demo-satellite"
-  description = "Name of ROCKS Cluster"
+  default     = "ssh-rafael"
+  description = "Existing ssh key name"
 }
+
+
+
 
 
 # variable "zones" {

@@ -4,7 +4,7 @@
 
 resource "ibm_container_vpc_cluster" "cluster" {
   name   = var.rocks_name
-  flavor = "bx2.16x64"
+  flavor = var.profile_rocks
   vpc_id = data.ibm_is_vpc.vpc.id
 
   zones {
