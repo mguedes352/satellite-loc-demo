@@ -10,13 +10,13 @@ variable "ibmcloud_api_key" {
 
 variable "region" {
   type        = string
-  default     = "br-sao"
+  default     = "us-south"
   description = "Check the Region you want to deploy your vpc"
 }
 
 variable "vpc_name" {
   type        = string
-  default     = "vpc-demo-satellite-rafael"
+  default     = "vpc-demo-satellite"
   description = "Name for VPC"
 }
 
@@ -31,7 +31,7 @@ variable "rocks_name" {
 
 variable "res_group" {
   type        = string
-  default     = "RG-Rafael"
+  default     = "RG-Demo-Satellite"
   description = "Your Resource Group"
 }
 
@@ -62,32 +62,6 @@ variable "vsi_number" {
 
 variable "my_ssh_key_name" {
   type        = string
-  default     = "ssh-rafael"
+  default     = "ssh-rafael-dal"
   description = "Existing ssh key name"
 }
-
-
-
-
-
-# variable "zones" {
-#   type = list(string)
-#   //count = var.zones_number
-#   default = ["br-sao-1", "br-sao-2", "br-sao-3"]
-# }
-
-# variable "vpc_zone1" {
-#   default     = "br-sao-1"
-#   description = "Default zone 1 for br-sao"
-# }
-
-# variable "vpc_zone2" {
-#   default     = "br-sao-2"
-#   description = "Default zone 1 for br-sao"
-# }
-
-# variable "vpc_zone3" {
-#   default     = "br-sao-3"
-#   description = "Default zone 3 for br-sao"
-
-# }
