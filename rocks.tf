@@ -4,7 +4,7 @@
 
 resource "ibm_container_vpc_cluster" "cluster" {
   name   = var.rocks_name
-  flavor = "bx2.4x16"
+  flavor = "bx2.16x64"
   vpc_id = data.ibm_is_vpc.vpc.id
 
   zones {
@@ -25,7 +25,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
     OPTIONAL ARGUMENTS
     *****************/
   cos_instance_crn     = ibm_resource_instance.cos.id # REQUIRED FOR OPENSHIFT CLUSTERS
-  kube_version         = "4.11.39_openshift"
+  kube_version         = "4.10.59_openshift"
   force_delete_storage = false
   wait_till            = "MasterNodeReady"
   worker_count         = 1
