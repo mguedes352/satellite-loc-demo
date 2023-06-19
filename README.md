@@ -1,4 +1,4 @@
-# Terraform Script for Satellite Presentation
+# Terraform Script for IBM Cloud Satellite demo 
 
 Creating a VPC, VSI and ROCKS to use for satellite location demos.
 
