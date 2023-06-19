@@ -37,7 +37,7 @@ variable "res_group" {
 
 variable "os_version" {
   type        = string
-  default     = "ibm-centos-7-9-minimal-amd64-7"
+  default     = "ibm-redhat-9-0-minimal-amd64-2"
   description = "Check the OS versions available for VPC VSIs"
 }
 
